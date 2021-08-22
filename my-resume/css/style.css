@@ -311,6 +311,7 @@ section.skill-section .role {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
+    grid-gap: 1rem;
 }
 
 section.skill-section .role > div {
