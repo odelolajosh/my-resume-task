@@ -16,7 +16,15 @@ body {
 }
 
 h1 {
+    /* font-size: calc(32px + 3vmin); */
+    font-size: 52px;
+}
+
+@media screen and (mac-width: 600px) {
+    h1 {
     font-size: calc(32px + 3vmin);
+    color: red;
+    }
 }
 
 .container {
@@ -29,7 +37,7 @@ h1 {
 .animated-component::before,
 .animated-list > div,
 .animated-list > li {
-    transition: ease-in-out 500ms all;
+    transition: ease-in-out 500ms transform, ease-in-out 500ms opacity;
     transition-delay: 150ms;
 }
 
@@ -278,14 +286,37 @@ section.skill-section small::after {
     margin-left: 1rem;
 }
 
+section.skill-section .container > h3 {
+    margin-top: 6rem;
+    font-size: 30px;
+}
+
 section.skill-section .content {
-    margin-top: 4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-gap: 1rem;
-    padding: 0 4rem;
-    /* display: flex;
-    flex-flow: row wrap; */
+    margin-top: 3rem;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+section.skill-section .content::-webkit-scrollbar {
+    background-color: rgba(0, 128, 128, 0.04);
+    height: 4px;
+    border-radius: 50px;
+}
+
+section.skill-section .content::-webkit-scrollbar-thumb {
+    background-color: #00808028;
+}
+
+section.skill-section .content::-webkit-scrollbar-thumb:active {
+    background-color: var(--teal);
+}
+
+section.skill-section .content .sview {
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
 }
 
 @media (max-width: 500px) {
@@ -300,10 +331,11 @@ section.skill-section .content {
 } */
 
 section.skill-section .content img {
-    height: 60px;
+    height: 55px;
     min-height: auto;
     border-radius: 10px;
     filter: saturate(60%);
+    margin: 0 1rem;
 }
 
 section.skill-section .role {
@@ -378,7 +410,6 @@ section.education-section {
 }
 
 section.education-section p {
-    color: #C4C4C4;
     font-weight: normal;
 }
 
