@@ -300,7 +300,7 @@ section.skill-section .content {
 
 section.skill-section .content::-webkit-scrollbar {
     background-color: rgba(0, 128, 128, 0.04);
-    height: 4px;
+    height: 3px;
     border-radius: 50px;
 }
 
